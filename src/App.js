@@ -42,9 +42,9 @@ function App() {
             alert('Draw !')
             clearGame();
         }else if(!isPlayingWithF && !isXChance){
-          console.log(gameState)
+         // console.log(gameState)
             let moves = bestMove(gameState);
-            console.log(moves)
+           // console.log(moves)
             // if(moves.length){
             //   const random = Math.floor(Math.random() * moves.length);
             //   console.log(random)

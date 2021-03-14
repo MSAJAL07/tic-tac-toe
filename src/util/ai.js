@@ -8,7 +8,7 @@ const bestMove = (gameState) => {
     getAvailableMoves(gameState).forEach((element, index) => {
         gameState[element] = '0';
         let score = minimax(gameState, 0, false);
-        console.log(score,element)
+       // console.log(score,element)
         gameState[element] = "";
         if (score > bestScore) {
             bestScore = score;
