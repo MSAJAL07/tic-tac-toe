@@ -24,8 +24,8 @@ export default bestMove;
     let result = checkWinner(gameState);
     //console.log(result)
     if(result !== null){
-        if (result === '0') return 100;
-        else if(result === 'x') return -100;
+        if (result === '0') return 100-depth;
+        else if(result === 'x') return -100+depth;
     }else{
         let draw = checkDraw(gameState)
         if(draw){
