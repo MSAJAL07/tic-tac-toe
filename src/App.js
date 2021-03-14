@@ -60,9 +60,10 @@ function App() {
     return (
         <div className="app-header">
             <p className="heading-text">Tic Tac Toe </p>
-            <div className = "row jc-center">
-            <button disabled={isPlayingWithF} onClick={changeMode}>Friend</button>
-            <button disabled={!isPlayingWithF}  onClick={changeMode}>Computer</button>
+            <h3>You are palying with {isPlayingWithF?"friend" : "computer"}</h3>
+            <div className = "row jc-center" style ={{padding : "50PX"}}>
+            <button style = {{ width : "200px", height :"40PX", }} disabled={isPlayingWithF} onClick={changeMode}>Friend</button>
+            <button style = {{ width : "200px", height :"40PX", }} disabled={!isPlayingWithF}  onClick={changeMode}>Computer</button>
             </div>
             <div className="row jc-center">
                 <Square className="b-bottom-right" onClick={() => onUserClicked(0)} state={gameState[0]}/>
@@ -79,8 +80,8 @@ function App() {
                 <Square className="b-right" onClick={() => onUserClicked(7)} state={gameState[7]}/>
                 <Square onClick={() => onUserClicked(8)} state={gameState[8]}/>
             </div>
-            <button className="clear-button" onClick={clearGame}>Clear Game</button>
-            <text style={{ marginBottom: 20, color: "grey", display: "inline" }}>&copy; Sajal Kumar Mishra</text>
+            <button className="clear-button" style ={{ width : "200px", height :"40PX", }} onClick={clearGame}>Clear Game</button>
+            <span  style={{ marginBottom: 20, color: "grey", display: "inline" }}>&copy; Sajal Kumar Mishra</span>
         </div>
     );
 }
